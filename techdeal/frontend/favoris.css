@@ -1,0 +1,125 @@
+/* Styles généraux */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Titre principal */
+h1 {
+    margin-top: 20px;
+    font-size: 32px;
+    color: #2c3e50;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Conteneur des favoris */
+.favoris-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 10px;
+}
+
+/* Carte de favori */
+.favoris-container .favori-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.favoris-container .favori-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image de l'annonce */
+.favoris-container .favori-card img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.favoris-container .favori-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Titre de l'annonce */
+.favoris-container .favori-card h2 {
+    font-size: 20px;
+    color: #34495e;
+    margin: 15px 0;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+/* Prix de l'annonce */
+.favoris-container .favori-card p {
+    font-size: 18px;
+    color: #16a085;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Lien vers le détail */
+.favoris-container .favori-card a {
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #3498db;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.favoris-container .favori-card a:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+
+/* Message si aucun favori */
+.no-favoris {
+    font-size: 20px;
+    color: #7f8c8d;
+    margin-top: 50px;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Animation d'apparition */
+.favoris-container .favori-card {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
